@@ -15,5 +15,10 @@ public class HomeTest extends BaseTest {
 
         homePage = new HomePage(getDriver());
     }
+
+    @Test
+    public void test1(){
+
+    }
 }
 
