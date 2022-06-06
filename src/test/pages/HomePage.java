@@ -45,4 +45,15 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@id='button_order_cart']")
     public WebElement checkoutBtn;
 
+    @FindBy(xpath = "//li[@class='facebook']")
+    public WebElement facebookBtn;
+
+    @FindBy(xpath = "//li[@class='twitter']")
+    public WebElement twitterBtn;
+
+    @FindBy(xpath = "//li[@class='youtube']")
+    public WebElement youtubeBtn;
+
+    @FindBy(xpath = "//li[@class='google-plus']")
+    public WebElement googleBtn;
 }

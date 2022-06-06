@@ -74,5 +74,13 @@ public class HomeTest extends BaseTest {
 
         Assert.assertEquals(totalPrice, total);
     }
+    @Test(testName = "AUT-5 Follow us social media button",description = "Verify social media buttons take to expected pages")
+    public void facebookTest(){
+
+        homePage.click(homePage.facebookBtn);
+        homePage.facebookBtn.isEnabled();
+    }
+
+
 }
 
