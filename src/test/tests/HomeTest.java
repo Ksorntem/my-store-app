@@ -78,7 +78,7 @@ public class HomeTest extends BaseTest {
     public void facebookTest(){
 
         homePage.click(homePage.facebookBtn);
-        homePage.facebookBtn.isEnabled();
+        Assert.assertTrue(homePage.facebookBtn.isEnabled());
     }
 
 
