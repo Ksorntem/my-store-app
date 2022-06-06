@@ -80,7 +80,25 @@ public class HomeTest extends BaseTest {
         homePage.click(homePage.facebookBtn);
         Assert.assertTrue(homePage.facebookBtn.isEnabled());
     }
+    @Test
+    public void twitterTest(){
 
+        homePage.click(homePage.twitterBtn);
+        Assert.assertTrue(homePage.twitterBtn.isEnabled());
+    }
+    @Test
+    public void youtubeTest(){
 
+        homePage.click(homePage.youtubeBtn);
+        Assert.assertTrue(homePage.youtubeBtn.isEnabled());
+    }
+
+    @Test
+    public void googleTest(){
+
+        homePage.click(homePage.googleBtn);
+        Assert.assertTrue(homePage.googleBtn.isEnabled());
+
+    }
 }
 
