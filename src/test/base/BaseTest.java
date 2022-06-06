@@ -29,6 +29,7 @@ public class BaseTest {
 
     @AfterSuite
     public void endReporter(){
+
         extentManager.closeReport();
     }
 
@@ -68,8 +69,7 @@ public class BaseTest {
     }
 
     public WebDriver getDriver(){
+
         return driver;
     }
-
-
 }

@@ -39,9 +39,10 @@ public class HomePage extends BasePage {
     @FindBy(css = "div[class='product-name'] a[title='Blouse']")
     public WebElement blouse;
 
+    @FindBy(xpath = "//span[@class='price cart_block_total ajax_block_cart_total']")
+    public WebElement totalPrice;
+
     @FindBy(xpath = "//a[@id='button_order_cart']")
     public WebElement checkoutBtn;
-
-
 
 }

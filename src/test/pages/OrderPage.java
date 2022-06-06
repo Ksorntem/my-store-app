@@ -17,8 +17,6 @@ public class OrderPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//table/tbody/tr/td/p")
-    public List<WebElement> productList;
 
     @FindBy(xpath = "//*[text()='Faded Short Sleeve T-shirts']")
     public WebElement item1;
@@ -26,7 +24,7 @@ public class OrderPage extends BasePage {
     @FindBy(xpath = "//p[@class='product-name']/*[text()='Blouse']")
     public WebElement item2;
 
-
-
+    @FindBy(xpath = "//table/tfoot/tr[last()]/td//span[@id]")
+    public WebElement total;
 
 }
