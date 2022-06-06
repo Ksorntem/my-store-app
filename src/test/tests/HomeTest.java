@@ -31,6 +31,22 @@ public class HomeTest extends BaseTest {
     Assert.assertTrue(homePage.termsAndConditionsLink.isEnabled());
     Assert.assertTrue(homePage.aboutUsLink.isEnabled());
     Assert.assertTrue(homePage.sitemapLink.isEnabled());
+    }
+
+    @Test(testName = "AUT-4 Footer-My Account Section", description = "My account should have the following options")
+    public void test03(){
+        SeleniumUtils.scrollIntoView(getDriver(), homePage.InformationSection);
+
+        //Check all buttons are enabled
+        Assert.assertTrue(homePage.myOrdersLink.isEnabled());
+        Assert.assertTrue(homePage.myCreditSlipsLink.isEnabled());
+        Assert.assertTrue(homePage.myAddressesLink.isEnabled());
+        Assert.assertTrue(homePage.myPersonalInfoLink.isEnabled());
+
+        //Make sure all 4 links take user to Authentication page if user has not signed in yet
+        homePage.click(homePage.myOrdersBtn);
+        SeleniumUtils.switchToWindowAndVerifyTitle(getDriver(),extentManager);
+        //Stuck on this code
 
     }
 }

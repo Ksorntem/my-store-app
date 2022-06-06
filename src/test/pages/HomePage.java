@@ -42,6 +42,24 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//section[@class='footer-block col-xs-12 col-sm-2']//ul//li[8]")
     public WebElement sitemapLink;
 
+    @FindBy (xpath = "//div[@class='block_content toggle-footer']//ul//li[1]")
+    public WebElement myOrdersLink;
+
+    @FindBy(xpath = "//a[@title='My orders']")
+    public  WebElement myOrdersBtn;
+
+    @FindBy (xpath = "//div[@class='block_content toggle-footer']//ul//li[2]")
+    public WebElement myCreditSlipsLink;
+
+    @FindBy (xpath = "//div[@class='block_content toggle-footer']//ul//li[3]")
+    public WebElement myAddressesLink;
+
+    @FindBy (xpath = "//div[@class='block_content toggle-footer']//ul//li[4]")
+    public WebElement myPersonalInfoLink;
+
+    @FindBy(className = "navigation_page")
+    public WebElement authenticationScreen;
+
 
 }
 
