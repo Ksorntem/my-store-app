@@ -17,7 +17,20 @@ public class HomeTest extends BaseTest {
     }
 
     @Test
-    public void test1(){
+    public void test1() {
+    }
+
+    @Test(testName = "AUT-3 Footer-Information Section", description = " Information section should have the following buttons")
+    public void test02(){
+    SeleniumUtils.scrollIntoView(getDriver(), homePage.InformationSection);
+    Assert.assertTrue(homePage.specialsLink.isEnabled());
+    Assert.assertTrue(homePage.NewProductLink.isEnabled());
+    Assert.assertTrue(homePage.bestSellersLink.isEnabled());
+    Assert.assertTrue(homePage.ourStoresLink.isEnabled());
+    Assert.assertTrue(homePage.ContactUsLink.isEnabled());
+    Assert.assertTrue(homePage.termsAndConditionsLink.isEnabled());
+    Assert.assertTrue(homePage.aboutUsLink.isEnabled());
+    Assert.assertTrue(homePage.sitemapLink.isEnabled());
 
     }
 }

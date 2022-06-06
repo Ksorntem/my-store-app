@@ -1,6 +1,8 @@
 package utils;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.Set;
 
@@ -22,5 +24,9 @@ public class SeleniumUtils {
 
         driver.switchTo().window(currentWindowID);
         return title;
+    }
+    public static void scrollIntoView(WebDriver driver, WebElement element) {
+        JavascriptExecutor jExecutor = (JavascriptExecutor) driver;
+        jExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }
