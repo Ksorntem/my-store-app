@@ -48,5 +48,31 @@ public class HomeTest extends BaseTest {
         Assert.assertTrue(orderPage.item1.isDisplayed());
         Assert.assertTrue(orderPage.item2.isDisplayed());
     }
+
+    @Test(description = "Verify total price on small cart view is same as full cart view")
+    public void totalPriceTest(){
+
+        homePage.moveIntoView(homePage.shortSleeveImg);
+        Actions action = new Actions(getDriver());
+        action.moveToElement(homePage.shortSleeveImg).perform();
+        homePage.addCartBtn.click();
+        homePage.continueBtn.click();
+
+        action.moveToElement(homePage.blouseImg).perform();
+        homePage.addCartBtn2.click();
+        homePage.continueBtn.click();
+
+        action.moveToElement(homePage.viewCart).perform();
+
+        String totalPrice = homePage.getText(homePage.totalPrice);
+        System.out.println(totalPrice);
+
+        homePage.checkoutBtn.click();
+
+        String total = orderPage.total.getText();
+        System.out.println(total);
+
+        Assert.assertEquals(totalPrice, total);
+    }
 }
 
