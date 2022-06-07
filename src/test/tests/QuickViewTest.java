@@ -25,9 +25,14 @@ public class QuickViewTest extends BaseTest {
 
         homePage.quickViewBtn.click();
 
+        homePage.closeBtn.click();
+
+        homePage.TshirtBtn.click();
+
+        Assert.assertTrue(QuickViewPage.viewedShirtItem.getAttribute("title").contains(homePage.expectedShirtItemText));
 
 
-            }
+    }
         }
 
 
